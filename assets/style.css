@@ -1,0 +1,11 @@
+body{
+    font-family: SFMono-Regular,Menlo,Monaco,Consolas,"Liberation Mono","Courier New",monospace
+}
+
+a{ 
+    color:inherit !important;
+}
+
+.hide{
+    display: none;
+}

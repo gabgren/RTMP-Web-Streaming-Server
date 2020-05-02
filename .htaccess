@@ -1,0 +1,11 @@
+RewriteEngine On
+RewriteCond %{HTTPS} on
+RewriteRule (.*) http://%{HTTP_HOST}%{REQUEST_URI}
+
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-l
+RewriteRule ^admin/?$ admin.php [QSA,NC,L]
+RewriteRule ^(en|fr)/([a-f0-9]{32})/?$ index.php?lang=$1&session=$2 [L,QSA]
+RewriteRule ^([a-f0-9]{32})/?$ index.php?session=$1 [L,QSA]
+
